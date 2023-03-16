@@ -1,0 +1,23 @@
+/* Navegação */
+@import url(./nav.css);
+
+/* Main */
+@import url(./main.css);
+
+/* Area 1 (Find Your Teacher And Schdule) */
+@import url(./area-1.css);
+
+/* Area 2  My Courses*/
+@import url(./area-2.css);
+
+/* Container */
+@import url(./utilitarios/container.css);
+
+/* Cores */
+@import url(./utilitarios/cores.css);
+
+/* Tipocrafia */
+@import url(./utilitarios/tipocrafia.css);
+
+/* Reset Css */
+@import url(./utilitarios/reset.css);

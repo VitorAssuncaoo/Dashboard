@@ -1,0 +1,183 @@
+.nav-bg {
+  background-color: var(--cor-b1);
+}
+
+nav {
+  background-color: var(--cor-b1);
+  padding: 25px 15px 50px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex: 2;
+  position: relative;
+}
+
+.nav-logo input {
+  width: 360px;
+  padding: 9px 0px 9px 50px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 25px;
+  background-color: var(--cor-b2);
+  font-size: 16px;
+  border: 0px solid;
+  outline: none;
+}
+
+.nav-logo .fa-solid {
+  font-size: 19px;
+  position: absolute;
+  left: 300px;
+  color: var(--cor-b3);
+}
+
+nav .nav-perfil {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-perfil-icones {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-perfil-icones .fa-regular {
+  font-size: 30px;
+  color: var(--cor-b3);
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-perfil-icones .fa-regular:hover {
+  color: var(--cor-p1);
+  transition: color 0.3s;
+}
+
+.nav-perfil-icones .fa-regular::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  left: 18px;
+  top: 2px;
+  position: absolute;
+}
+
+.nav-perfil-icones .fa-solid {
+  font-size: 12px;
+  padding: 7px;
+  background-color: var(--cor-p1);
+  color: var(--cor-b1);
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s;
+  border-radius: 50%;
+}
+
+.nav-perfil .nav-perfil-area {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.nav-perfil-area img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (max-width: 990px) {
+  .nav-logo input,
+  .nav-logo .fa-solid {
+    display: none;
+  }
+
+  .nav-logo {
+    flex: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 25px 20px;
+  }
+
+  .nav-logo h2 {
+    font-size: 2rem;
+  }
+
+  .nav-perfil {
+    gap: 20px;
+  }
+
+  .nav-perfil .fa-regular {
+    font-size: 1.8rem;
+  }
+
+  .nav-perfil-area span {
+    font-size: 1.4rem;
+  }
+
+  nav .nav-perfil {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    padding: 25px 20px;
+  }
+
+  .nav-logo h2 {
+    font-size: 1.5rem;
+  }
+
+  .nav-perfil .fa-regular {
+    font-size: 1.3rem;
+  }
+
+  .nav-perfil .fa-solid {
+    padding: 7px;
+    font-size: 10px;
+  }
+
+  .nav-perfil-area span {
+    font-size: 1.4rem;
+  }
+
+  nav .nav-perfil {
+    gap: 15px;
+  }
+
+  .nav-perfil .nav-perfil-area {
+    gap: 5px;
+  }
+
+  .nav-perfil .fa-regular::after {
+    left: 12px;
+  }
+
+  .nav-perfil .nav-perfil-area img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .nav-perfil .nav-perfil-area span {
+    font-size: 1.1rem;
+  }
+}

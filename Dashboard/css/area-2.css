@@ -1,0 +1,113 @@
+.area-2 {
+  background-color: var(--cor-b4);
+  border-radius: 30px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.area-2 .cursos-area {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cursos-area .curso {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 10px 0px 10px 100px;
+  position: relative;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+.curso i {
+  font-size: 1.5rem;
+  color: var(--cor-b2);
+  padding: 15px 15px;
+  background-color: var(--cor-p1);
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  transition: 0.5s;
+}
+
+.cursos-area .curso:hover {
+  transform: scale(1.03);
+  background-color: var(--cor-p1);
+}
+
+.cursos-area .curso:hover i {
+  color: var(--cor-p1);
+  background-color: var(--cor-b1);
+}
+
+.cursos-area .curso:hover span {
+  color: var(--cor-b1);
+}
+
+.progresso-area {
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+
+.porcentagem-progresso {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+.porcentagem-progresso span {
+  padding: 80px;
+  border-radius: 50%;
+  border: 15px solid var(--cor-b1);
+}
+
+.progresso-barra {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.progresso-barra div {
+  width: 100%;
+  height: 20px;
+  background-color: var(--cor-b1);
+  border-radius: 20px;
+}
+
+@media (max-width: 600px) {
+  .area-2 h3 {
+    font-size: 1.6rem;
+  }
+
+  .curso i {
+    font-size: 1.6rem;
+  }
+
+  .curso .nome-curso span:first-child {
+    font-size: 1.25rem;
+  }
+
+  .curso .nome-curso span:last-child {
+    font-size: 0.95rem;
+  }
+
+  .porcentagem-progresso span {
+    font-size: 1.9rem;
+  }
+
+  .progresso-barra div {
+    height: 15px;
+  }
+
+  .progresso-barra span {
+    padding-bottom: 4px;
+    font-size: 1rem;
+  }
+}

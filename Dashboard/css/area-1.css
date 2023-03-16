@@ -1,0 +1,427 @@
+.procure-professor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.procure-professor span {
+  padding: 7px 32px;
+  border-radius: 25px;
+  border: 2px solid var(--cor-b3);
+  cursor: pointer;
+  transition: color, border 0.4s;
+  text-transform: uppercase;
+}
+
+.procure-professor span:hover {
+  color: var(--cor-p2);
+  border: 2px solid var(--cor-p2);
+  transition: color, border 0.4s;
+}
+
+.professores-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.professores-area .prof {
+  display: flex;
+  padding: 15px 10px 15px 20px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.professores-area .prof:hover {
+  background-color: var(--cor-p1);
+  transform: scale(1.015);
+  transition: all 0.3s;
+}
+
+.professores-area .prof:hover span {
+  color: var(--cor-b1);
+}
+
+.professores-area .prof:hover .fa-solid {
+  background-color: var(--cor-b1);
+  color: var(--cor-p1);
+}
+
+.prof .prof-info {
+  flex: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.prof-info img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.prof .prof-contratar {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prof-contratar .fa-solid {
+  padding: 10px;
+  color: var(--cor-b1);
+  background-color: var(--cor-p1);
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.prof-contratar .fa-solid:hover {
+  background-color: var(--cor-p2);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.agendar {
+  padding: 25px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.agendar .horario-prof {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.horario-prof .prof {
+  padding: 10px 36px;
+  background-color: var(--cor-p1);
+  border-radius: 20px;
+  color: var(--cor-b1);
+  border: 2px solid var(--cor-p1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.professor-agendar-area {
+  display: flex;
+  gap: 40px;
+}
+
+.professor-agendar-area > div {
+  flex: 1;
+}
+
+.agendar-prof-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  background-color: var(--cor-b2);
+  padding: 25px 0px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.agendar-prof-info img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.agendar-prof-info button {
+  margin-top: 30px;
+  padding: 12px 32px;
+  color: var(--cor-b1);
+  background-color: var(--cor-p1);
+  border-radius: 25px;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 0px;
+}
+
+.agendar-prof-info button:hover {
+  background-color: var(--cor-b1);
+  color: var(--cor-p1);
+}
+
+.agendar-dias {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.agendar-dias > div {
+  flex: 1;
+  background-color: var(--cor-b1);
+  border-radius: 25px;
+  border: 2px solid var(--cor-p2);
+  display: flex;
+  align-items: center;
+  color: var(--cor-p1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.agendar-dias > div:hover {
+  background-color: var(--cor-p1);
+  color: var(--cor-b1);
+}
+
+.agendar-dias .dia-area {
+  display: flex;
+  padding-left: 30px;
+}
+
+.dia-area .dia {
+  flex: 1;
+}
+
+.dia-area .mes {
+  flex: 2;
+}
+
+.agendar-horas-aula {
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.agendar-horas-aula > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsivo */
+
+@media (max-width: 1050px) {
+  .prof-info img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .prof-info span {
+    font-size: 1.1rem;
+  }
+
+  .prof-contratar span {
+    font-size: 1rem;
+  }
+
+  .professores-area {
+    flex-direction: column;
+  }
+
+  .prof .prof-contratar {
+    display: flex;
+    justify-content: end;
+    gap: 80px;
+    flex: 3;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .prof-contratar .fa-solid {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .professor-agendar-area {
+    gap: 10px;
+  }
+
+  .agendar-prof-info span {
+    font-size: 1.3rem;
+  }
+
+  .agendar-prof-info p {
+    font-size: 1rem;
+  }
+
+  .agendar-prof-info button {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  .agendar-prof-info img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .dia-area .dia span {
+    font-size: 1.4rem;
+  }
+
+  .dia-area .mes span:first-child {
+    font-size: 0.9rem;
+  }
+  .dia-area .mes span:last-child {
+    font-size: 1rem;
+  }
+
+  .agendar-horas-aula .hora span {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .procure-professor h2 {
+    font-size: 1.3rem;
+  }
+
+  .procure-professor span {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  .prof .prof-info {
+    gap: 10px;
+  }
+
+  .prof-info img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .prof-info span {
+    font-size: 1rem;
+  }
+
+  .prof-contratar span {
+    font-size: 0.7rem;
+  }
+
+  .prof-contratar .fa-solid {
+    font-size: 0.7rem;
+    padding: 7px;
+  }
+
+  .professores-area .prof {
+    padding: 9px 15px;
+  }
+
+  .prof .prof-contratar {
+    display: flex;
+    gap: 20px;
+  }
+
+  .agendar > span {
+    font-size: 1.7rem;
+  }
+
+  .horario-prof > span:last-child {
+    font-size: 1rem;
+    padding: 6px 18px;
+  }
+
+  .professor-agendar-area {
+    flex-wrap: wrap;
+  }
+
+  .professor-agendar-area .agendar-prof-info {
+    flex: 1 1 600px;
+  }
+
+  .professor-agendar-area .agendar-prof-info {
+    gap: 14px;
+  }
+
+  .agendar-prof-info span {
+    font-size: 1.6rem;
+  }
+
+  .agendar-prof-info p {
+    font-size: 1.2rem;
+  }
+
+  .agendar-prof-info button {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  .agendar-prof-info img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .agendar-dias .dia-area {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .dia-area .dia span {
+    font-size: 1.6rem;
+  }
+
+  .dia-area .mes span:first-child {
+    font-size: 0.8rem;
+  }
+  .dia-area .mes span:last-child {
+    font-size: 1rem;
+  }
+
+  .agendar-horas-aula .hora span {
+    font-size: 0.9rem;
+  }
+
+  .agendar-dias .dia-area {
+    padding-left: 20px;
+  }
+
+  .prof-info img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .agendar {
+    padding: 50px 0px 10px 0px;
+  }
+
+  .professor-agendar-area {
+    gap: 30px 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .prof .prof-contratar {
+    gap: 10px;
+  }
+
+  .agendar > span {
+    font-size: 1.4rem;
+  }
+
+  .horario-prof > span:last-child {
+    font-size: 0.9rem;
+    padding: 6px 18px;
+  }
+
+  .agendar .horario-prof {
+    gap: 5px;
+  }
+
+  .prof-info span {
+    font-size: 0.9rem;
+  }
+}
